@@ -1,0 +1,409 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A10000000000000000000001 /* StepFlowAIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000101 /* StepFlowAIApp.swift */; };
+		A10000000000000000000002 /* Block.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000102 /* Block.swift */; };
+		A10000000000000000000003 /* FormatterOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000103 /* FormatterOperation.swift */; };
+		A10000000000000000000004 /* SettingsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000104 /* SettingsStore.swift */; };
+		A10000000000000000000005 /* Workflow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000105 /* Workflow.swift */; };
+		A10000000000000000000006 /* AnalyticsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000106 /* AnalyticsService.swift */; };
+		A10000000000000000000007 /* KeychainHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000107 /* KeychainHelper.swift */; };
+		A10000000000000000000008 /* OpenAIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000108 /* OpenAIClient.swift */; };
+		A10000000000000000000009 /* PersistenceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000109 /* PersistenceService.swift */; };
+		A1000000000000000000000A /* SubscriptionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000000000000000000010A /* SubscriptionManager.swift */; };
+		A1000000000000000000000B /* WorkflowRunner.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000000000000000000010B /* WorkflowRunner.swift */; };
+		A1000000000000000000000C /* ErrorTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000000000000000000010C /* ErrorTypes.swift */; };
+		A1000000000000000000000D /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000000000000000000010D /* Extensions.swift */; };
+		A1000000000000000000000E /* PaywallViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000000000000000000010E /* PaywallViewModel.swift */; };
+		A1000000000000000000000F /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000000000000000000010F /* SettingsViewModel.swift */; };
+		A10000000000000000000010 /* WorkflowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000110 /* WorkflowViewModel.swift */; };
+		A10000000000000000000011 /* AddStepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000111 /* AddStepView.swift */; };
+		A10000000000000000000012 /* BlockCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000112 /* BlockCardView.swift */; };
+		A10000000000000000000013 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000113 /* OnboardingView.swift */; };
+		A10000000000000000000014 /* OutputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000114 /* OutputView.swift */; };
+		A10000000000000000000015 /* PaywallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000115 /* PaywallView.swift */; };
+		A10000000000000000000016 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000116 /* SettingsView.swift */; };
+		A10000000000000000000017 /* WorkflowScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000117 /* WorkflowScreen.swift */; };
+		A10000000000000000000018 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000118 /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A10000000000000000000101 /* StepFlowAIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App/StepFlowAIApp.swift; sourceTree = "<group>"; };
+		A10000000000000000000102 /* Block.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models/Block.swift; sourceTree = "<group>"; };
+		A10000000000000000000103 /* FormatterOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models/FormatterOperation.swift; sourceTree = "<group>"; };
+		A10000000000000000000104 /* SettingsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models/SettingsStore.swift; sourceTree = "<group>"; };
+		A10000000000000000000105 /* Workflow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models/Workflow.swift; sourceTree = "<group>"; };
+		A10000000000000000000106 /* AnalyticsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services/AnalyticsService.swift; sourceTree = "<group>"; };
+		A10000000000000000000107 /* KeychainHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services/KeychainHelper.swift; sourceTree = "<group>"; };
+		A10000000000000000000108 /* OpenAIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services/OpenAIClient.swift; sourceTree = "<group>"; };
+		A10000000000000000000109 /* PersistenceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services/PersistenceService.swift; sourceTree = "<group>"; };
+		A1000000000000000000010A /* SubscriptionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services/SubscriptionManager.swift; sourceTree = "<group>"; };
+		A1000000000000000000010B /* WorkflowRunner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services/WorkflowRunner.swift; sourceTree = "<group>"; };
+		A1000000000000000000010C /* ErrorTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities/ErrorTypes.swift; sourceTree = "<group>"; };
+		A1000000000000000000010D /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities/Extensions.swift; sourceTree = "<group>"; };
+		A1000000000000000000010E /* PaywallViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModels/PaywallViewModel.swift; sourceTree = "<group>"; };
+		A1000000000000000000010F /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModels/SettingsViewModel.swift; sourceTree = "<group>"; };
+		A10000000000000000000110 /* WorkflowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModels/WorkflowViewModel.swift; sourceTree = "<group>"; };
+		A10000000000000000000111 /* AddStepView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views/AddStepView.swift; sourceTree = "<group>"; };
+		A10000000000000000000112 /* BlockCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views/BlockCardView.swift; sourceTree = "<group>"; };
+		A10000000000000000000113 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views/OnboardingView.swift; sourceTree = "<group>"; };
+		A10000000000000000000114 /* OutputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views/OutputView.swift; sourceTree = "<group>"; };
+		A10000000000000000000115 /* PaywallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views/PaywallView.swift; sourceTree = "<group>"; };
+		A10000000000000000000116 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views/SettingsView.swift; sourceTree = "<group>"; };
+		A10000000000000000000117 /* WorkflowScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views/WorkflowScreen.swift; sourceTree = "<group>"; };
+		A10000000000000000000118 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = StepFlowAI/Assets.xcassets; sourceTree = "<group>"; };
+		A10000000000000000000119 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = StepFlowAI/Info.plist; sourceTree = "<group>"; };
+		A1000000000000000000011A /* StepFlowAI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; path = StepFlowAI.app; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A10000000000000000000201 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A10000000000000000000301 /* StepFlowAI */ = {
+			isa = PBXGroup;
+			children = (
+				A10000000000000000000302 /* App */,
+				A10000000000000000000303 /* Models */,
+				A10000000000000000000304 /* Services */,
+				A10000000000000000000305 /* Utilities */,
+				A10000000000000000000306 /* ViewModels */,
+				A10000000000000000000307 /* Views */,
+				A10000000000000000000308 /* Resources */,
+				A1000000000000000000011A /* StepFlowAI.app */,
+			);
+			path = "";
+			sourceTree = "<group>";
+		};
+		A10000000000000000000302 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				A10000000000000000000101 /* StepFlowAIApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		A10000000000000000000303 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A10000000000000000000102 /* Block.swift */,
+				A10000000000000000000103 /* FormatterOperation.swift */,
+				A10000000000000000000104 /* SettingsStore.swift */,
+				A10000000000000000000105 /* Workflow.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A10000000000000000000304 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				A10000000000000000000106 /* AnalyticsService.swift */,
+				A10000000000000000000107 /* KeychainHelper.swift */,
+				A10000000000000000000108 /* OpenAIClient.swift */,
+				A10000000000000000000109 /* PersistenceService.swift */,
+				A1000000000000000000010A /* SubscriptionManager.swift */,
+				A1000000000000000000010B /* WorkflowRunner.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		A10000000000000000000305 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				A1000000000000000000010C /* ErrorTypes.swift */,
+				A1000000000000000000010D /* Extensions.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		A10000000000000000000306 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				A1000000000000000000010E /* PaywallViewModel.swift */,
+				A1000000000000000000010F /* SettingsViewModel.swift */,
+				A10000000000000000000110 /* WorkflowViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		A10000000000000000000307 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A10000000000000000000111 /* AddStepView.swift */,
+				A10000000000000000000112 /* BlockCardView.swift */,
+				A10000000000000000000113 /* OnboardingView.swift */,
+				A10000000000000000000114 /* OutputView.swift */,
+				A10000000000000000000115 /* PaywallView.swift */,
+				A10000000000000000000116 /* SettingsView.swift */,
+				A10000000000000000000117 /* WorkflowScreen.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A10000000000000000000308 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A10000000000000000000118 /* Assets.xcassets */,
+				A10000000000000000000119 /* Info.plist */,
+			);
+			path = StepFlowAI;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A10000000000000000000401 /* StepFlowAI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A10000000000000000000501 /* Build configuration list for PBXNativeTarget "StepFlowAI" */;
+			buildPhases = (
+				A10000000000000000000211 /* Sources */,
+				A10000000000000000000201 /* Frameworks */,
+				A10000000000000000000221 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = StepFlowAI;
+			productName = StepFlowAI;
+			productReference = A1000000000000000000011A /* StepFlowAI.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A10000000000000000000601 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					A10000000000000000000401 = {
+						CreatedOnToolsVersion = 15.0;
+					};
+				};
+			};
+			buildConfigurationList = A10000000000000000000502 /* Build configuration list for PBXProject "StepFlowAI" */;
+			compatibilityVersion = "Xcode 15.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A10000000000000000000301 /* StepFlowAI */;
+			productRefGroup = A10000000000000000000301 /* StepFlowAI */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A10000000000000000000401 /* StepFlowAI */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A10000000000000000000221 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A10000000000000000000018 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A10000000000000000000211 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A10000000000000000000001 /* StepFlowAIApp.swift in Sources */,
+				A10000000000000000000002 /* Block.swift in Sources */,
+				A10000000000000000000003 /* FormatterOperation.swift in Sources */,
+				A10000000000000000000004 /* SettingsStore.swift in Sources */,
+				A10000000000000000000005 /* Workflow.swift in Sources */,
+				A10000000000000000000006 /* AnalyticsService.swift in Sources */,
+				A10000000000000000000007 /* KeychainHelper.swift in Sources */,
+				A10000000000000000000008 /* OpenAIClient.swift in Sources */,
+				A10000000000000000000009 /* PersistenceService.swift in Sources */,
+				A1000000000000000000000A /* SubscriptionManager.swift in Sources */,
+				A1000000000000000000000B /* WorkflowRunner.swift in Sources */,
+				A1000000000000000000000C /* ErrorTypes.swift in Sources */,
+				A1000000000000000000000D /* Extensions.swift in Sources */,
+				A1000000000000000000000E /* PaywallViewModel.swift in Sources */,
+				A1000000000000000000000F /* SettingsViewModel.swift in Sources */,
+				A10000000000000000000010 /* WorkflowViewModel.swift in Sources */,
+				A10000000000000000000011 /* AddStepView.swift in Sources */,
+				A10000000000000000000012 /* BlockCardView.swift in Sources */,
+				A10000000000000000000013 /* OnboardingView.swift in Sources */,
+				A10000000000000000000014 /* OutputView.swift in Sources */,
+				A10000000000000000000015 /* PaywallView.swift in Sources */,
+				A10000000000000000000016 /* SettingsView.swift in Sources */,
+				A10000000000000000000017 /* WorkflowScreen.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		A10000000000000000000701 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = StepFlowAI/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.stepflow.ai;
+				PRODUCT_NAME = StepFlowAI;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		A10000000000000000000702 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = StepFlowAI/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.stepflow.ai;
+				PRODUCT_NAME = StepFlowAI;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		A10000000000000000000703 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PRODUCT_NAME = StepFlowAI;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A10000000000000000000704 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PRODUCT_NAME = StepFlowAI;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A10000000000000000000501 /* Build configuration list for PBXNativeTarget "StepFlowAI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A10000000000000000000701 /* Debug */,
+				A10000000000000000000702 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		A10000000000000000000502 /* Build configuration list for PBXProject "StepFlowAI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A10000000000000000000703 /* Debug */,
+				A10000000000000000000704 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A10000000000000000000601 /* Project object */;
+}
