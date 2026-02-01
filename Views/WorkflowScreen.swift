@@ -10,55 +10,89 @@ struct WorkflowScreen: View {
 
     var body: some View {
         NavigationStack {
-            VStack(spacing: 0) {
-                List {
-                    Section("Workflow") {
-                        TextField("Workflow name", text: Binding(
-                            get: { viewModel.workflow.name },
-                            set: { viewModel.updateWorkflowName($0) }
-                        ))
-                    }
+            ZStack {
+                DesignSystem.gradientBackground
+                    .ignoresSafeArea()
+                ScrollView {
+                    VStack(spacing: 20) {
+                        CardView {
+                            VStack(alignment: .leading, spacing: 16) {
+                                SectionHeaderView(
+                                    title: "Workflow",
+                                    subtitle: "Name and organize your steps."
+                                )
+                                TextField("My Workflow", text: Binding(
+                                    get: { viewModel.workflow.name },
+                                    set: { viewModel.updateWorkflowName($0) }
+                                ))
+                                .textFieldStyle(.roundedBorder)
+                            }
+                        }
 
-                    Section("Input") {
-                        TextEditor(text: Binding(
-                            get: { viewModel.workflow.inputText },
-                            set: { viewModel.updateInputText($0) }
-                        ))
-                        .frame(minHeight: 120)
-                        HStack {
-                            Text("\(viewModel.workflow.inputText.count) characters")
-                                .font(.caption)
-                                .foregroundStyle(.secondary)
-                            Spacer()
-                            Button("Paste") {
-                                if let pasted = UIPasteboard.general.string {
-                                    viewModel.updateInputText(pasted)
+                        CardView {
+                            VStack(alignment: .leading, spacing: 12) {
+                                SectionHeaderView(
+                                    title: "Input",
+                                    subtitle: "Paste the text you want to transform."
+                                )
+                                TextEditor(text: Binding(
+                                    get: { viewModel.workflow.inputText },
+                                    set: { viewModel.updateInputText($0) }
+                                ))
+                                .frame(minHeight: 140)
+                                .padding(8)
+                                .background(
+                                    RoundedRectangle(cornerRadius: 12)
+                                        .fill(Color(.systemBackground))
+                                )
+                                HStack {
+                                    Text("\(viewModel.workflow.inputText.count) characters")
+                                        .font(.caption)
+                                        .foregroundStyle(.secondary)
+                                    Spacer()
+                                    Button("Paste") {
+                                        if let pasted = UIPasteboard.general.string {
+                                            viewModel.updateInputText(pasted)
+                                        }
+                                    }
+                                    .buttonStyle(.bordered)
+                                    Button("Clear") {
+                                        viewModel.updateInputText("")
+                                    }
+                                    .buttonStyle(.bordered)
                                 }
                             }
-                            .buttonStyle(.bordered)
-                            Button("Clear") {
-                                viewModel.updateInputText("")
-                            }
-                            .buttonStyle(.bordered)
                         }
-                    }
 
-                    Section("Steps") {
-                        if viewModel.workflow.blocks.isEmpty {
-                            Text("Add your first step to begin.")
-                                .foregroundStyle(.secondary)
-                        }
-                        ForEach(viewModel.workflow.blocks) { block in
-                            BlockCardView(block: block) {
-                                editingBlock = block
+                        VStack(alignment: .leading, spacing: 12) {
+                            SectionHeaderView(
+                                title: "Steps",
+                                subtitle: "Drag to reorder. Tap edit to refine each step."
+                            )
+                            if viewModel.workflow.blocks.isEmpty {
+                                CardView {
+                                    Text("Add your first step to begin.")
+                                        .foregroundStyle(.secondary)
+                                }
+                            } else {
+                                VStack(spacing: 12) {
+                                    ForEach(viewModel.workflow.blocks) { block in
+                                        BlockCardView(block: block) {
+                                            editingBlock = block
+                                        }
+                                    }
+                                    .onMove(perform: viewModel.moveBlock)
+                                    .onDelete(perform: viewModel.deleteBlock)
+                                }
                             }
                         }
-                        .onDelete(perform: viewModel.deleteBlock)
-                        .onMove(perform: viewModel.moveBlock)
+                        .padding(.horizontal)
                     }
+                    .padding(.top)
+                    .padding(.bottom, 120)
+                    .frame(maxWidth: DesignSystem.maxContentWidth)
+                    .frame(maxWidth: .infinity)
                 }
-                .listStyle(.insetGrouped)
-
                 VStack(spacing: 12) {
                     Text(limitMessage)
                         .font(.footnote)
@@ -67,17 +101,20 @@ struct WorkflowScreen: View {
                         Button("Add Step") {
                             showAddStep = true
                         }
-                        .buttonStyle(.bordered)
-
+                        .buttonStyle(SecondaryButtonStyle())
                         Button("Run") {
                             viewModel.runWorkflow()
                         }
-                        .buttonStyle(.borderedProminent)
+                        .buttonStyle(PrimaryButtonStyle())
                         .disabled(viewModel.workflow.inputText.trimmed.isEmpty || viewModel.workflow.blocks.isEmpty)
                     }
                 }
                 .padding()
-                .background(.thinMaterial)
+                .background(.ultraThinMaterial)
+                .clipShape(RoundedRectangle(cornerRadius: 20))
+                .padding()
+                .frame(maxWidth: DesignSystem.maxContentWidth)
+                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottom)
             }
             .navigationTitle("Workflow")
             .toolbar {
@@ -154,7 +191,7 @@ struct ProgressOverlayView: View {
                 Text("Running step \(min(stepIndex, totalSteps)) of \(totalSteps)")
                     .font(.headline)
                 Button("Cancel", action: onCancel)
-                    .buttonStyle(.bordered)
+                    .buttonStyle(SecondaryButtonStyle())
             }
             .padding(24)
             .background(

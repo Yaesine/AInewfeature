@@ -7,47 +7,83 @@ struct SettingsView: View {
 
     var body: some View {
         NavigationStack {
-            Form {
-                Section("API Provider") {
-                    Text("OpenAI")
-                }
-
-                Section("API Key") {
-                    SecureField("sk-...", text: $viewModel.apiKeyInput)
-                    Button("Test Key") {
-                        Task {
-                            await viewModel.testAPIKey()
+            ZStack {
+                DesignSystem.gradientBackground
+                    .ignoresSafeArea()
+                ScrollView {
+                    VStack(spacing: 16) {
+                        CardView {
+                            VStack(alignment: .leading, spacing: 12) {
+                                SectionHeaderView(
+                                    title: "API provider",
+                                    subtitle: "Connect your OpenAI key to enable AI steps."
+                                )
+                                Text("OpenAI")
+                                    .font(.headline)
+                            }
                         }
-                    }
-                    .disabled(viewModel.isTestingKey)
 
-                    if let message = viewModel.testStatusMessage {
-                        Text(message)
-                            .font(.caption)
-                            .foregroundStyle(.secondary)
-                    }
-                }
+                        CardView {
+                            VStack(alignment: .leading, spacing: 12) {
+                                SectionHeaderView(
+                                    title: "API key",
+                                    subtitle: "Stored securely in the device Keychain."
+                                )
+                                SecureField("sk-...", text: $viewModel.apiKeyInput)
+                                    .textFieldStyle(.roundedBorder)
+                                Button("Test Key") {
+                                    Task {
+                                        await viewModel.testAPIKey()
+                                    }
+                                }
+                                .buttonStyle(SecondaryButtonStyle())
+                                .disabled(viewModel.isTestingKey)
 
-                Section("Model") {
-                    TextField("Model name", text: $viewModel.settings.modelName)
-                    HStack {
-                        Text("Temperature")
-                        Spacer()
-                        Text(String(format: "%.1f", viewModel.settings.temperature))
-                    }
-                    Slider(value: $viewModel.settings.temperature, in: 0...1, step: 0.1)
-                }
+                                if let message = viewModel.testStatusMessage {
+                                    Text(message)
+                                        .font(.caption)
+                                        .foregroundStyle(.secondary)
+                                }
+                            }
+                        }
 
-                Section("Limits") {
-                    Text("Free: up to 3 blocks, 10 runs/day")
-                        .font(.footnote)
-                        .foregroundStyle(.secondary)
-                }
+                        CardView {
+                            VStack(alignment: .leading, spacing: 12) {
+                                SectionHeaderView(
+                                    title: "Model",
+                                    subtitle: "Default model and temperature."
+                                )
+                                TextField("Model name", text: $viewModel.settings.modelName)
+                                    .textFieldStyle(.roundedBorder)
+                                HStack {
+                                    Text("Temperature")
+                                    Spacer()
+                                    Text(String(format: "%.1f", viewModel.settings.temperature))
+                                        .foregroundStyle(.secondary)
+                                }
+                                Slider(value: $viewModel.settings.temperature, in: 0...1, step: 0.1)
+                            }
+                        }
 
-                Section {
-                    Button("Manage Subscription") {
-                        onShowPaywall()
+                        CardView {
+                            VStack(alignment: .leading, spacing: 12) {
+                                SectionHeaderView(
+                                    title: "Limits",
+                                    subtitle: "Upgrade for higher limits."
+                                )
+                                Text("Free: up to 3 blocks, 10 runs/day")
+                                    .foregroundStyle(.secondary)
+                            }
+                        }
+
+                        Button("Manage Subscription") {
+                            onShowPaywall()
+                        }
+                        .buttonStyle(PrimaryButtonStyle())
                     }
+                    .padding()
+                    .frame(maxWidth: DesignSystem.maxContentWidth)
+                    .frame(maxWidth: .infinity)
                 }
             }
             .navigationTitle("Settings")

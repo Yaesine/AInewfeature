@@ -8,27 +8,35 @@ struct OutputView: View {
 
     var body: some View {
         NavigationStack {
-            VStack(spacing: 16) {
-                ScrollView {
-                    Text(output)
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                        .padding()
+            ZStack {
+                DesignSystem.gradientBackground
+                    .ignoresSafeArea()
+                VStack(spacing: 16) {
+                    CardView {
+                        ScrollView {
+                            Text(output)
+                                .frame(maxWidth: .infinity, alignment: .leading)
+                        }
+                        .frame(minHeight: 240)
+                    }
+                    HStack(spacing: 12) {
+                        Button("Copy") {
+                            UIPasteboard.general.string = output
+                        }
+                        .buttonStyle(SecondaryButtonStyle())
+                        ShareLink(item: output) {
+                            Text("Share")
+                        }
+                        .buttonStyle(SecondaryButtonStyle())
+                        Button("Save as Note") {
+                            onSaveNote()
+                        }
+                        .buttonStyle(PrimaryButtonStyle())
+                    }
                 }
-                HStack(spacing: 12) {
-                    Button("Copy") {
-                        UIPasteboard.general.string = output
-                    }
-                    .buttonStyle(.bordered)
-                    ShareLink(item: output) {
-                        Text("Share")
-                    }
-                    .buttonStyle(.bordered)
-                    Button("Save as Note") {
-                        onSaveNote()
-                    }
-                    .buttonStyle(.borderedProminent)
-                }
-                .padding(.bottom, 12)
+                .padding()
+                .frame(maxWidth: DesignSystem.maxContentWidth)
+                .frame(maxWidth: .infinity)
             }
             .navigationTitle("Result")
             .toolbar {

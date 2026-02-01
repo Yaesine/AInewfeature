@@ -5,23 +5,22 @@ struct BlockCardView: View {
     let onEdit: () -> Void
 
     var body: some View {
-        VStack(alignment: .leading, spacing: 8) {
-            HStack {
-                Text(block.type.displayName)
-                    .font(.headline)
-                Spacer()
-                Button("Edit", action: onEdit)
-                    .buttonStyle(.bordered)
+        CardView {
+            VStack(alignment: .leading, spacing: 12) {
+                HStack(alignment: .center) {
+                    VStack(alignment: .leading, spacing: 4) {
+                        Text(block.type.displayName)
+                            .font(.headline)
+                        Text(block.displayDetail)
+                            .font(.subheadline)
+                            .foregroundStyle(.secondary)
+                            .lineLimit(2)
+                    }
+                    Spacer()
+                    Button("Edit", action: onEdit)
+                        .buttonStyle(.bordered)
+                }
             }
-            Text(block.displayDetail)
-                .font(.subheadline)
-                .foregroundStyle(.secondary)
-                .lineLimit(2)
         }
-        .padding()
-        .background(
-            RoundedRectangle(cornerRadius: 16)
-                .fill(Color(.secondarySystemBackground))
-        )
     }
 }

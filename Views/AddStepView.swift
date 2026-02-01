@@ -40,52 +40,80 @@ struct AddStepView: View {
 
     var body: some View {
         NavigationStack {
-            Form {
-                Section("Step Type") {
-                    Picker("Type", selection: $selectedType) {
-                        Text("AI Step").tag(BlockType.ai)
-                        Text("Formatter").tag(BlockType.formatter)
-                    }
-                    .pickerStyle(.segmented)
-                }
+            ZStack {
+                DesignSystem.gradientBackground
+                    .ignoresSafeArea()
+                ScrollView {
+                    VStack(spacing: 16) {
+                        CardView {
+                            VStack(alignment: .leading, spacing: 12) {
+                                SectionHeaderView(
+                                    title: "Step type",
+                                    subtitle: "Choose an AI step or a deterministic formatter."
+                                )
+                                Picker("Type", selection: $selectedType) {
+                                    Text("AI Step").tag(BlockType.ai)
+                                    Text("Formatter").tag(BlockType.formatter)
+                                }
+                                .pickerStyle(.segmented)
+                            }
+                        }
 
-                if selectedType == .ai {
-                    Section("Instruction") {
-                        TextField("e.g. Summarize", text: $instruction)
-                            .textInputAutocapitalization(.sentences)
-                        ScrollView(.horizontal, showsIndicators: false) {
-                            HStack(spacing: 8) {
-                                ForEach(instructionExamples, id: \.self) { example in
-                                    Button(example) {
-                                        instruction = example
+                        if selectedType == .ai {
+                            CardView {
+                                VStack(alignment: .leading, spacing: 12) {
+                                    SectionHeaderView(
+                                        title: "Instruction",
+                                        subtitle: "Describe the transformation you want."
+                                    )
+                                    TextField("e.g. Summarize", text: $instruction)
+                                        .textInputAutocapitalization(.sentences)
+                                        .textFieldStyle(.roundedBorder)
+                                    ScrollView(.horizontal, showsIndicators: false) {
+                                        HStack(spacing: 8) {
+                                            ForEach(instructionExamples, id: \.self) { example in
+                                                Button(example) {
+                                                    instruction = example
+                                                }
+                                                .buttonStyle(.bordered)
+                                            }
+                                        }
+                                        .padding(.vertical, 4)
                                     }
-                                    .buttonStyle(.bordered)
+                                    Text("200 character limit")
+                                        .font(.caption)
+                                        .foregroundStyle(.secondary)
                                 }
                             }
-                            .padding(.vertical, 4)
-                        }
-                        Text("200 character limit")
-                            .font(.caption)
-                            .foregroundStyle(.secondary)
-                    }
-                } else {
-                    Section("Formatter") {
-                        Picker("Operation", selection: $formatterKind) {
-                            Text("Fix grammar").tag(FormatterOperation.Kind.fixGrammar)
-                            Text("Shorten").tag(FormatterOperation.Kind.shorten)
-                            Text("Expand").tag(FormatterOperation.Kind.expand)
-                            Text("Bullet points").tag(FormatterOperation.Kind.bulletPoints)
-                            Text("Tone").tag(FormatterOperation.Kind.tone)
-                        }
-                        if formatterKind == .tone {
-                            Picker("Tone", selection: $selectedTone) {
-                                ForEach(FormatterTone.allCases, id: \.self) { tone in
-                                    Text(tone.displayName).tag(tone)
+                        } else {
+                            CardView {
+                                VStack(alignment: .leading, spacing: 12) {
+                                    SectionHeaderView(
+                                        title: "Formatter",
+                                        subtitle: "Deterministic local transformation."
+                                    )
+                                    Picker("Operation", selection: $formatterKind) {
+                                        Text("Fix grammar").tag(FormatterOperation.Kind.fixGrammar)
+                                        Text("Shorten").tag(FormatterOperation.Kind.shorten)
+                                        Text("Expand").tag(FormatterOperation.Kind.expand)
+                                        Text("Bullet points").tag(FormatterOperation.Kind.bulletPoints)
+                                        Text("Tone").tag(FormatterOperation.Kind.tone)
+                                    }
+                                    if formatterKind == .tone {
+                                        Picker("Tone", selection: $selectedTone) {
+                                            ForEach(FormatterTone.allCases, id: \.self) { tone in
+                                                Text(tone.displayName).tag(tone)
+                                            }
+                                        }
+                                        .pickerStyle(.segmented)
+                                    }
                                 }
                             }
-                            .pickerStyle(.segmented)
                         }
                     }
+                    .padding()
+                    .frame(maxWidth: DesignSystem.maxContentWidth)
+                    .frame(maxWidth: .infinity)
                 }
             }
             .navigationTitle(existingBlock == nil ? "Add Step" : "Edit Step")
