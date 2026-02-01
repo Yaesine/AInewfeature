@@ -85,17 +85,17 @@ final class WorkflowViewModel: ObservableObject {
         runTask?.cancel()
         runTask = Task {
             do {
-                let output = try await runner.run(blocks: blocks, input: workflow.inputText, settings: settings) { step, total in
-                    currentStepIndex = step
+                let output = try await self.runner.run(blocks: blocks, input: self.workflow.inputText, settings: settings) { step, total in
+                    self.currentStepIndex = step
                 }
-                outputText = output
-                saveWorkflow()
-                subscriptionManager.recordRun()
-                showOutput = true
+                self.outputText = output
+                self.saveWorkflow()
+                self.subscriptionManager.recordRun()
+                self.showOutput = true
             } catch {
-                errorMessage = error.localizedDescription
+                self.errorMessage = error.localizedDescription
             }
-            isRunning = false
+            self.isRunning = false
         }
     }
 
