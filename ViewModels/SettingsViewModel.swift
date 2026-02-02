@@ -59,4 +59,13 @@ final class SettingsViewModel: ObservableObject {
             testStatusMessage = error.localizedDescription
         }
     }
+
+    func testDemoAI() async {
+        isTestingKey = true
+        testStatusMessage = nil
+        defer { isTestingKey = false }
+        let demo = DemoAIClient()
+        let result = await demo.runInstruction(input: "i has bad grammar", instruction: "Fix grammar and spelling.")
+        testStatusMessage = result.isEmpty ? "Demo AI failed." : "Demo AI is ready."
+    }
 }

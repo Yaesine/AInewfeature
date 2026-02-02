@@ -1,0 +1,18 @@
+# macOS
+.DS_Store
+
+# Xcode / SwiftPM
+DerivedData/
+build/
+*.xcuserstate
+*.xccheckout
+*.xcscmblueprint
+
+# Per-user Xcode settings
+xcuserdata/
+*.xcuserdata/
+
+# Xcode project workspace (generated)
+StepFlowAI.xcodeproj/project.xcworkspace/
+StepFlowAI.xcodeproj/xcuserdata/
+

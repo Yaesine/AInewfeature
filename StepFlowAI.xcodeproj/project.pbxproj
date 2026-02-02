@@ -3,62 +3,68 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 60;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A10000000000000000000001 /* StepFlowAIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000101 /* StepFlowAIApp.swift */; };
-		A10000000000000000000002 /* Block.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000102 /* Block.swift */; };
-		A10000000000000000000003 /* FormatterOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000103 /* FormatterOperation.swift */; };
-		A10000000000000000000004 /* SettingsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000104 /* SettingsStore.swift */; };
-		A10000000000000000000005 /* Workflow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000105 /* Workflow.swift */; };
-		A10000000000000000000006 /* AnalyticsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000106 /* AnalyticsService.swift */; };
-		A10000000000000000000007 /* KeychainHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000107 /* KeychainHelper.swift */; };
-		A10000000000000000000008 /* OpenAIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000108 /* OpenAIClient.swift */; };
-		A10000000000000000000009 /* PersistenceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000109 /* PersistenceService.swift */; };
-		A1000000000000000000000A /* SubscriptionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000000000000000000010A /* SubscriptionManager.swift */; };
-		A1000000000000000000000B /* WorkflowRunner.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000000000000000000010B /* WorkflowRunner.swift */; };
-		A1000000000000000000000C /* ErrorTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000000000000000000010C /* ErrorTypes.swift */; };
-		A1000000000000000000000D /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000000000000000000010D /* Extensions.swift */; };
-		A1000000000000000000000E /* PaywallViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000000000000000000010E /* PaywallViewModel.swift */; };
-		A1000000000000000000000F /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000000000000000000010F /* SettingsViewModel.swift */; };
-		A10000000000000000000010 /* WorkflowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000110 /* WorkflowViewModel.swift */; };
-		A10000000000000000000011 /* AddStepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000111 /* AddStepView.swift */; };
-		A10000000000000000000012 /* BlockCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000112 /* BlockCardView.swift */; };
-		A10000000000000000000013 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000113 /* OnboardingView.swift */; };
-		A10000000000000000000014 /* OutputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000114 /* OutputView.swift */; };
-		A10000000000000000000015 /* PaywallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000115 /* PaywallView.swift */; };
-		A10000000000000000000016 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000116 /* SettingsView.swift */; };
-		A10000000000000000000017 /* WorkflowScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000117 /* WorkflowScreen.swift */; };
-		A10000000000000000000018 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000118 /* Assets.xcassets */; };
+		A10000000000000000000001 /* App/StepFlowAIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000101 /* App/StepFlowAIApp.swift */; };
+		A10000000000000000000002 /* Models/Block.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000102 /* Models/Block.swift */; };
+		A10000000000000000000003 /* Models/FormatterOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000103 /* Models/FormatterOperation.swift */; };
+		A10000000000000000000004 /* Models/SettingsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000104 /* Models/SettingsStore.swift */; };
+		A10000000000000000000005 /* Models/Workflow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000105 /* Models/Workflow.swift */; };
+		A10000000000000000000006 /* Services/AnalyticsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000106 /* Services/AnalyticsService.swift */; };
+		A10000000000000000000007 /* Services/KeychainHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000107 /* Services/KeychainHelper.swift */; };
+		A10000000000000000000008 /* Services/OpenAIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000108 /* Services/OpenAIClient.swift */; };
+		A1000000000000000000001B /* Services/DemoAIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000000000000000000011D /* Services/DemoAIClient.swift */; };
+		A10000000000000000000009 /* Services/PersistenceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000109 /* Services/PersistenceService.swift */; };
+		A1000000000000000000000A /* Services/SubscriptionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000000000000000000010A /* Services/SubscriptionManager.swift */; };
+		A1000000000000000000000B /* Services/WorkflowRunner.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000000000000000000010B /* Services/WorkflowRunner.swift */; };
+		A1000000000000000000000C /* Utilities/ErrorTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000000000000000000010C /* Utilities/ErrorTypes.swift */; };
+		A1000000000000000000000D /* Utilities/Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000000000000000000010D /* Utilities/Extensions.swift */; };
+		A10000000000000000000019 /* Utilities/DesignSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000000000000000000011B /* Utilities/DesignSystem.swift */; };
+		A1000000000000000000001A /* Utilities/Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000000000000000000011C /* Utilities/Log.swift */; };
+		A1000000000000000000000E /* ViewModels/PaywallViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000000000000000000010E /* ViewModels/PaywallViewModel.swift */; };
+		A1000000000000000000000F /* ViewModels/SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000000000000000000010F /* ViewModels/SettingsViewModel.swift */; };
+		A10000000000000000000010 /* ViewModels/WorkflowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000110 /* ViewModels/WorkflowViewModel.swift */; };
+		A10000000000000000000011 /* Views/AddStepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000111 /* Views/AddStepView.swift */; };
+		A10000000000000000000012 /* Views/BlockCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000112 /* Views/BlockCardView.swift */; };
+		A10000000000000000000013 /* Views/OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000113 /* Views/OnboardingView.swift */; };
+		A10000000000000000000014 /* Views/OutputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000114 /* Views/OutputView.swift */; };
+		A10000000000000000000015 /* Views/PaywallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000115 /* Views/PaywallView.swift */; };
+		A10000000000000000000016 /* Views/SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000116 /* Views/SettingsView.swift */; };
+		A10000000000000000000017 /* Views/WorkflowScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000117 /* Views/WorkflowScreen.swift */; };
+		A10000000000000000000018 /* StepFlowAI/Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000118 /* StepFlowAI/Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		A10000000000000000000101 /* StepFlowAIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App/StepFlowAIApp.swift; sourceTree = "<group>"; };
-		A10000000000000000000102 /* Block.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models/Block.swift; sourceTree = "<group>"; };
-		A10000000000000000000103 /* FormatterOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models/FormatterOperation.swift; sourceTree = "<group>"; };
-		A10000000000000000000104 /* SettingsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models/SettingsStore.swift; sourceTree = "<group>"; };
-		A10000000000000000000105 /* Workflow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models/Workflow.swift; sourceTree = "<group>"; };
-		A10000000000000000000106 /* AnalyticsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services/AnalyticsService.swift; sourceTree = "<group>"; };
-		A10000000000000000000107 /* KeychainHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services/KeychainHelper.swift; sourceTree = "<group>"; };
-		A10000000000000000000108 /* OpenAIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services/OpenAIClient.swift; sourceTree = "<group>"; };
-		A10000000000000000000109 /* PersistenceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services/PersistenceService.swift; sourceTree = "<group>"; };
-		A1000000000000000000010A /* SubscriptionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services/SubscriptionManager.swift; sourceTree = "<group>"; };
-		A1000000000000000000010B /* WorkflowRunner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services/WorkflowRunner.swift; sourceTree = "<group>"; };
-		A1000000000000000000010C /* ErrorTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities/ErrorTypes.swift; sourceTree = "<group>"; };
-		A1000000000000000000010D /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities/Extensions.swift; sourceTree = "<group>"; };
-		A1000000000000000000010E /* PaywallViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModels/PaywallViewModel.swift; sourceTree = "<group>"; };
-		A1000000000000000000010F /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModels/SettingsViewModel.swift; sourceTree = "<group>"; };
-		A10000000000000000000110 /* WorkflowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModels/WorkflowViewModel.swift; sourceTree = "<group>"; };
-		A10000000000000000000111 /* AddStepView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views/AddStepView.swift; sourceTree = "<group>"; };
-		A10000000000000000000112 /* BlockCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views/BlockCardView.swift; sourceTree = "<group>"; };
-		A10000000000000000000113 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views/OnboardingView.swift; sourceTree = "<group>"; };
-		A10000000000000000000114 /* OutputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views/OutputView.swift; sourceTree = "<group>"; };
-		A10000000000000000000115 /* PaywallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views/PaywallView.swift; sourceTree = "<group>"; };
-		A10000000000000000000116 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views/SettingsView.swift; sourceTree = "<group>"; };
-		A10000000000000000000117 /* WorkflowScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views/WorkflowScreen.swift; sourceTree = "<group>"; };
-		A10000000000000000000118 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = StepFlowAI/Assets.xcassets; sourceTree = "<group>"; };
-		A10000000000000000000119 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = StepFlowAI/Info.plist; sourceTree = "<group>"; };
+		A10000000000000000000101 /* App/StepFlowAIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepFlowAIApp.swift; sourceTree = "<group>"; };
+		A10000000000000000000102 /* Models/Block.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Block.swift; sourceTree = "<group>"; };
+		A10000000000000000000103 /* Models/FormatterOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormatterOperation.swift; sourceTree = "<group>"; };
+		A10000000000000000000104 /* Models/SettingsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsStore.swift; sourceTree = "<group>"; };
+		A10000000000000000000105 /* Models/Workflow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workflow.swift; sourceTree = "<group>"; };
+		A10000000000000000000106 /* Services/AnalyticsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsService.swift; sourceTree = "<group>"; };
+		A10000000000000000000107 /* Services/KeychainHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainHelper.swift; sourceTree = "<group>"; };
+		A10000000000000000000108 /* Services/OpenAIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAIClient.swift; sourceTree = "<group>"; };
+		A1000000000000000000011D /* Services/DemoAIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoAIClient.swift; sourceTree = "<group>"; };
+		A10000000000000000000109 /* Services/PersistenceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceService.swift; sourceTree = "<group>"; };
+		A1000000000000000000010A /* Services/SubscriptionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionManager.swift; sourceTree = "<group>"; };
+		A1000000000000000000010B /* Services/WorkflowRunner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkflowRunner.swift; sourceTree = "<group>"; };
+		A1000000000000000000010C /* Utilities/ErrorTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorTypes.swift; sourceTree = "<group>"; };
+		A1000000000000000000010D /* Utilities/Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		A1000000000000000000011B /* Utilities/DesignSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignSystem.swift; sourceTree = "<group>"; };
+		A1000000000000000000011C /* Utilities/Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
+		A1000000000000000000010E /* ViewModels/PaywallViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaywallViewModel.swift; sourceTree = "<group>"; };
+		A1000000000000000000010F /* ViewModels/SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
+		A10000000000000000000110 /* ViewModels/WorkflowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkflowViewModel.swift; sourceTree = "<group>"; };
+		A10000000000000000000111 /* Views/AddStepView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddStepView.swift; sourceTree = "<group>"; };
+		A10000000000000000000112 /* Views/BlockCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockCardView.swift; sourceTree = "<group>"; };
+		A10000000000000000000113 /* Views/OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		A10000000000000000000114 /* Views/OutputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutputView.swift; sourceTree = "<group>"; };
+		A10000000000000000000115 /* Views/PaywallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaywallView.swift; sourceTree = "<group>"; };
+		A10000000000000000000116 /* Views/SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		A10000000000000000000117 /* Views/WorkflowScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkflowScreen.swift; sourceTree = "<group>"; };
+		A10000000000000000000118 /* StepFlowAI/Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A10000000000000000000119 /* StepFlowAI/Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A1000000000000000000011A /* StepFlowAI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; path = StepFlowAI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -73,7 +79,7 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		A10000000000000000000301 /* StepFlowAI */ = {
+		A10000000000000000000301 /*  */ = {
 			isa = PBXGroup;
 			children = (
 				A10000000000000000000302 /* App */,
@@ -82,16 +88,16 @@
 				A10000000000000000000305 /* Utilities */,
 				A10000000000000000000306 /* ViewModels */,
 				A10000000000000000000307 /* Views */,
-				A10000000000000000000308 /* Resources */,
+				A10000000000000000000308 /* StepFlowAI */,
 				A1000000000000000000011A /* StepFlowAI.app */,
 			);
-			path = "";
+			name = "";
 			sourceTree = "<group>";
 		};
 		A10000000000000000000302 /* App */ = {
 			isa = PBXGroup;
 			children = (
-				A10000000000000000000101 /* StepFlowAIApp.swift */,
+				A10000000000000000000101 /* App/StepFlowAIApp.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -99,10 +105,10 @@
 		A10000000000000000000303 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				A10000000000000000000102 /* Block.swift */,
-				A10000000000000000000103 /* FormatterOperation.swift */,
-				A10000000000000000000104 /* SettingsStore.swift */,
-				A10000000000000000000105 /* Workflow.swift */,
+				A10000000000000000000102 /* Models/Block.swift */,
+				A10000000000000000000103 /* Models/FormatterOperation.swift */,
+				A10000000000000000000104 /* Models/SettingsStore.swift */,
+				A10000000000000000000105 /* Models/Workflow.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -110,12 +116,13 @@
 		A10000000000000000000304 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				A10000000000000000000106 /* AnalyticsService.swift */,
-				A10000000000000000000107 /* KeychainHelper.swift */,
-				A10000000000000000000108 /* OpenAIClient.swift */,
-				A10000000000000000000109 /* PersistenceService.swift */,
-				A1000000000000000000010A /* SubscriptionManager.swift */,
-				A1000000000000000000010B /* WorkflowRunner.swift */,
+				A10000000000000000000106 /* Services/AnalyticsService.swift */,
+				A10000000000000000000107 /* Services/KeychainHelper.swift */,
+				A10000000000000000000108 /* Services/OpenAIClient.swift */,
+				A1000000000000000000011D /* Services/DemoAIClient.swift */,
+				A10000000000000000000109 /* Services/PersistenceService.swift */,
+				A1000000000000000000010A /* Services/SubscriptionManager.swift */,
+				A1000000000000000000010B /* Services/WorkflowRunner.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -123,8 +130,10 @@
 		A10000000000000000000305 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				A1000000000000000000010C /* ErrorTypes.swift */,
-				A1000000000000000000010D /* Extensions.swift */,
+				A1000000000000000000010C /* Utilities/ErrorTypes.swift */,
+				A1000000000000000000010D /* Utilities/Extensions.swift */,
+				A1000000000000000000011B /* Utilities/DesignSystem.swift */,
+				A1000000000000000000011C /* Utilities/Log.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -132,9 +141,9 @@
 		A10000000000000000000306 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				A1000000000000000000010E /* PaywallViewModel.swift */,
-				A1000000000000000000010F /* SettingsViewModel.swift */,
-				A10000000000000000000110 /* WorkflowViewModel.swift */,
+				A1000000000000000000010E /* ViewModels/PaywallViewModel.swift */,
+				A1000000000000000000010F /* ViewModels/SettingsViewModel.swift */,
+				A10000000000000000000110 /* ViewModels/WorkflowViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -142,22 +151,22 @@
 		A10000000000000000000307 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				A10000000000000000000111 /* AddStepView.swift */,
-				A10000000000000000000112 /* BlockCardView.swift */,
-				A10000000000000000000113 /* OnboardingView.swift */,
-				A10000000000000000000114 /* OutputView.swift */,
-				A10000000000000000000115 /* PaywallView.swift */,
-				A10000000000000000000116 /* SettingsView.swift */,
-				A10000000000000000000117 /* WorkflowScreen.swift */,
+				A10000000000000000000111 /* Views/AddStepView.swift */,
+				A10000000000000000000112 /* Views/BlockCardView.swift */,
+				A10000000000000000000113 /* Views/OnboardingView.swift */,
+				A10000000000000000000114 /* Views/OutputView.swift */,
+				A10000000000000000000115 /* Views/PaywallView.swift */,
+				A10000000000000000000116 /* Views/SettingsView.swift */,
+				A10000000000000000000117 /* Views/WorkflowScreen.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
 		};
-		A10000000000000000000308 /* Resources */ = {
+		A10000000000000000000308 /* StepFlowAI */ = {
 			isa = PBXGroup;
 			children = (
-				A10000000000000000000118 /* Assets.xcassets */,
-				A10000000000000000000119 /* Info.plist */,
+				A10000000000000000000118 /* StepFlowAI/Assets.xcassets */,
+				A10000000000000000000119 /* StepFlowAI/Info.plist */,
 			);
 			path = StepFlowAI;
 			sourceTree = "<group>";
@@ -205,8 +214,8 @@
 				en,
 				Base,
 			);
-			mainGroup = A10000000000000000000301 /* StepFlowAI */;
-			productRefGroup = A10000000000000000000301 /* StepFlowAI */;
+			mainGroup = A10000000000000000000301 /*  */;
+			productRefGroup = A10000000000000000000301 /*  */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -220,7 +229,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A10000000000000000000018 /* Assets.xcassets in Resources */,
+				A10000000000000000000018 /* StepFlowAI/Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -231,29 +240,32 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A10000000000000000000001 /* StepFlowAIApp.swift in Sources */,
-				A10000000000000000000002 /* Block.swift in Sources */,
-				A10000000000000000000003 /* FormatterOperation.swift in Sources */,
-				A10000000000000000000004 /* SettingsStore.swift in Sources */,
-				A10000000000000000000005 /* Workflow.swift in Sources */,
-				A10000000000000000000006 /* AnalyticsService.swift in Sources */,
-				A10000000000000000000007 /* KeychainHelper.swift in Sources */,
-				A10000000000000000000008 /* OpenAIClient.swift in Sources */,
-				A10000000000000000000009 /* PersistenceService.swift in Sources */,
-				A1000000000000000000000A /* SubscriptionManager.swift in Sources */,
-				A1000000000000000000000B /* WorkflowRunner.swift in Sources */,
-				A1000000000000000000000C /* ErrorTypes.swift in Sources */,
-				A1000000000000000000000D /* Extensions.swift in Sources */,
-				A1000000000000000000000E /* PaywallViewModel.swift in Sources */,
-				A1000000000000000000000F /* SettingsViewModel.swift in Sources */,
-				A10000000000000000000010 /* WorkflowViewModel.swift in Sources */,
-				A10000000000000000000011 /* AddStepView.swift in Sources */,
-				A10000000000000000000012 /* BlockCardView.swift in Sources */,
-				A10000000000000000000013 /* OnboardingView.swift in Sources */,
-				A10000000000000000000014 /* OutputView.swift in Sources */,
-				A10000000000000000000015 /* PaywallView.swift in Sources */,
-				A10000000000000000000016 /* SettingsView.swift in Sources */,
-				A10000000000000000000017 /* WorkflowScreen.swift in Sources */,
+				A10000000000000000000001 /* App/StepFlowAIApp.swift in Sources */,
+				A10000000000000000000002 /* Models/Block.swift in Sources */,
+				A10000000000000000000003 /* Models/FormatterOperation.swift in Sources */,
+				A10000000000000000000004 /* Models/SettingsStore.swift in Sources */,
+				A10000000000000000000005 /* Models/Workflow.swift in Sources */,
+				A10000000000000000000006 /* Services/AnalyticsService.swift in Sources */,
+				A10000000000000000000007 /* Services/KeychainHelper.swift in Sources */,
+				A10000000000000000000008 /* Services/OpenAIClient.swift in Sources */,
+				A1000000000000000000001B /* Services/DemoAIClient.swift in Sources */,
+				A10000000000000000000009 /* Services/PersistenceService.swift in Sources */,
+				A1000000000000000000000A /* Services/SubscriptionManager.swift in Sources */,
+				A1000000000000000000000B /* Services/WorkflowRunner.swift in Sources */,
+				A1000000000000000000000C /* Utilities/ErrorTypes.swift in Sources */,
+				A1000000000000000000000D /* Utilities/Extensions.swift in Sources */,
+				A10000000000000000000019 /* Utilities/DesignSystem.swift in Sources */,
+				A1000000000000000000001A /* Utilities/Log.swift in Sources */,
+				A1000000000000000000000E /* ViewModels/PaywallViewModel.swift in Sources */,
+				A1000000000000000000000F /* ViewModels/SettingsViewModel.swift in Sources */,
+				A10000000000000000000010 /* ViewModels/WorkflowViewModel.swift in Sources */,
+				A10000000000000000000011 /* Views/AddStepView.swift in Sources */,
+				A10000000000000000000012 /* Views/BlockCardView.swift in Sources */,
+				A10000000000000000000013 /* Views/OnboardingView.swift in Sources */,
+				A10000000000000000000014 /* Views/OutputView.swift in Sources */,
+				A10000000000000000000015 /* Views/PaywallView.swift in Sources */,
+				A10000000000000000000016 /* Views/SettingsView.swift in Sources */,
+				A10000000000000000000017 /* Views/WorkflowScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,10 +277,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 7U56452K33;
 				INFOPLIST_FILE = StepFlowAI/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.stepflow.ai;
 				PRODUCT_NAME = StepFlowAI;
 				SDKROOT = iphoneos;
@@ -282,10 +297,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 7U56452K33;
 				INFOPLIST_FILE = StepFlowAI/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.stepflow.ai;
 				PRODUCT_NAME = StepFlowAI;
 				SDKROOT = iphoneos;
@@ -333,8 +351,8 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				PRODUCT_NAME = StepFlowAI;
 				SDKROOT = iphoneos;
-				SWIFT_VERSION = 5.0;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -377,8 +395,8 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				PRODUCT_NAME = StepFlowAI;
 				SDKROOT = iphoneos;
-				SWIFT_VERSION = 5.0;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};

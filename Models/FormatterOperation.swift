@@ -65,7 +65,7 @@ enum FormatterOperation: Codable, Equatable, CaseIterable {
     var displayName: String {
         switch self {
         case .fixGrammar:
-            return "Fix grammar"
+            return "Fix grammar (AI)"
         case .shorten:
             return "Shorten"
         case .expand:

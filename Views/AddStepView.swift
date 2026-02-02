@@ -44,9 +44,9 @@ struct AddStepView: View {
                 DesignSystem.gradientBackground
                     .ignoresSafeArea()
                 ScrollView {
-                    VStack(spacing: 16) {
+                    VStack(spacing: DesignSystem.Spacing.l) {
                         CardView {
-                            VStack(alignment: .leading, spacing: 12) {
+                            VStack(alignment: .leading, spacing: DesignSystem.Spacing.m) {
                                 SectionHeaderView(
                                     title: "Step type",
                                     subtitle: "Choose an AI step or a deterministic formatter."
@@ -61,16 +61,27 @@ struct AddStepView: View {
 
                         if selectedType == .ai {
                             CardView {
-                                VStack(alignment: .leading, spacing: 12) {
+                                VStack(alignment: .leading, spacing: DesignSystem.Spacing.m) {
                                     SectionHeaderView(
                                         title: "Instruction",
                                         subtitle: "Describe the transformation you want."
                                     )
-                                    TextField("e.g. Summarize", text: $instruction)
-                                        .textInputAutocapitalization(.sentences)
-                                        .textFieldStyle(.roundedBorder)
+                                    ZStack(alignment: .topLeading) {
+                                        if instruction.isEmpty {
+                                            Text("e.g. Summarize the input in 5 bullet points")
+                                                .foregroundStyle(DesignSystem.Colors.secondaryText)
+                                                .padding(.horizontal, 16)
+                                                .padding(.vertical, 14)
+                                        }
+                                        TextEditor(text: $instruction)
+                                            .frame(minHeight: 90)
+                                            .padding(8)
+                                            .scrollContentBackground(.hidden)
+                                    }
+                                    .dsFieldStyle()
+
                                     ScrollView(.horizontal, showsIndicators: false) {
-                                        HStack(spacing: 8) {
+                                        HStack(spacing: DesignSystem.Spacing.s) {
                                             ForEach(instructionExamples, id: \.self) { example in
                                                 Button(example) {
                                                     instruction = example
@@ -80,24 +91,33 @@ struct AddStepView: View {
                                         }
                                         .padding(.vertical, 4)
                                     }
-                                    Text("200 character limit")
+                                    HStack {
+                                        Text("Up to 200 characters")
+                                        Spacer()
+                                        Text("\(instruction.count)/200")
+                                    }
                                         .font(.caption)
-                                        .foregroundStyle(.secondary)
+                                        .foregroundStyle(DesignSystem.Colors.secondaryText)
                                 }
                             }
                         } else {
                             CardView {
-                                VStack(alignment: .leading, spacing: 12) {
+                                VStack(alignment: .leading, spacing: DesignSystem.Spacing.m) {
                                     SectionHeaderView(
                                         title: "Formatter",
                                         subtitle: "Deterministic local transformation."
                                     )
                                     Picker("Operation", selection: $formatterKind) {
-                                        Text("Fix grammar").tag(FormatterOperation.Kind.fixGrammar)
+                                        Text("Fix grammar (AI)").tag(FormatterOperation.Kind.fixGrammar)
                                         Text("Shorten").tag(FormatterOperation.Kind.shorten)
                                         Text("Expand").tag(FormatterOperation.Kind.expand)
                                         Text("Bullet points").tag(FormatterOperation.Kind.bulletPoints)
                                         Text("Tone").tag(FormatterOperation.Kind.tone)
+                                    }
+                                    if formatterKind == .fixGrammar {
+                                        Text("Requires API key. Uses AI for real grammar correction.")
+                                            .font(.caption)
+                                            .foregroundStyle(DesignSystem.Colors.secondaryText)
                                     }
                                     if formatterKind == .tone {
                                         Picker("Tone", selection: $selectedTone) {
@@ -117,6 +137,7 @@ struct AddStepView: View {
                 }
             }
             .navigationTitle(existingBlock == nil ? "Add Step" : "Edit Step")
+            .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .confirmationAction) {
                     Button("Save") {

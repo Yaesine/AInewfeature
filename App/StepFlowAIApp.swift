@@ -6,11 +6,15 @@ struct StepFlowAIApp: App {
 
     var body: some Scene {
         WindowGroup {
-            if didOnboard {
-                WorkflowScreen(viewModel: WorkflowViewModel())
-            } else {
-                OnboardingView()
+            Group {
+                if didOnboard {
+                    RootTabView()
+                } else {
+                    OnboardingView()
+                }
             }
+            .preferredColorScheme(.dark)
+            .tint(DesignSystem.Colors.brandOrange)
         }
     }
 }
